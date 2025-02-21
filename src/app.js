@@ -15,3 +15,15 @@ console.log(
     `Результат функции applyToAll для ${words}: ` +
     `${applyToAll(words, (word) => word.toUpperCase())}`
 )
+
+
+let evenNumbers = getEvenNumbers(numbers)
+let squaredEvenNumbers = squareNumbers(evenNumbers)
+let sumOfSquares = addNumbers(squaredEvenNumbers)
+console.log(`Сумма квадратов чисел ${evenNumbers}: ${sumOfSquares}`)
+
+let lessThan7 = getItemsWithProperty(numbers, (n) => n < 7)
+let average = addNumbers(
+    applyToAll(lessThan7, (n) => n / lessThan7.length)
+)
+console.log(`Среднее арифметическое чисел ${lessThan7}: ${average}`)
