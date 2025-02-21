@@ -28,8 +28,8 @@ let squaredEvenNumbers = squareNumbers(evenNumbers)
 let sumOfSquares = addNumbers(squaredEvenNumbers)
 console.log(`Сумма квадратов чисел ${evenNumbers}: ${sumOfSquares}`)
 
-let lessThan7 = getItemsWithProperty(numbers, (n) => n < 7)
+let greaterThan4 = getItemsWithProperty(numbers, (n) => n > 4)
 let average = addNumbers(
-    applyToAll(lessThan7, (n) => n / lessThan7.length)
+    applyToAll(greaterThan4, (n) => n / greaterThan4.length)
 )
-console.log(`Среднее арифметическое чисел ${lessThan7}: ${average}`)
+console.log(`Среднее арифметическое чисел ${greaterThan4}: ${average}`)
