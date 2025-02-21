@@ -30,3 +30,12 @@ export function getItemsWithProperty(items, hasProperty) {
 export function addNumbers(numbers) {
     return numbers.reduce((acc, n) => acc + n)
 }
+
+/**
+ * @param {(item) => transformed} func Function argument
+ * @param {Array} items An array
+ * @returns A new array consisting of the results of `func` applied to every element of `items`
+ */
+export function applyToAll(items, func) {
+    return items.map(i => func(i))
+}
